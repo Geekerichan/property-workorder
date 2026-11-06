@@ -1,0 +1,208 @@
+/* 移动端：工程档案风格，暖纸白底、近直角、底部固定操作 */
+:root {
+  --paper: #f6f4ef;
+  --card: #ffffff;
+  --ink: #22201b;
+  --ink-2: #6b675e;
+  --ink-3: #8a8578;
+  --line: #e4e0d6;
+  --line-strong: #c9c4b8;
+  --brand: #d9480f;
+  --brand-dark: #b53d0a;
+  --done: #3f7a56;
+  --doing: #3b6ea5;
+  --warn: #c98a12;
+  --danger: #b23a2f;
+
+  --van-primary-color: #d9480f;
+  --van-danger-color: #b23a2f;
+  --van-success-color: #3f7a56;
+  --van-warning-color: #c98a12;
+  --van-text-color: #22201b;
+  --van-text-color-2: #6b675e;
+  --van-text-color-3: #8a8578;
+  --van-border-color: #e4e0d6;
+  --van-background: #f6f4ef;
+  --van-background-2: #ffffff;
+  --van-radius-md: 2px;
+  --van-radius-lg: 2px;
+  --van-button-border-radius: 2px;
+  --van-cell-group-inset-padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.page-m {
+  min-height: 100vh;
+  padding-bottom: 76px;
+}
+
+.m-header {
+  padding: 16px 16px 10px;
+  background: #fbfaf6;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.m-title {
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.m-sub {
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-top: 4px;
+}
+
+.m-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  margin: 12px 12px 0;
+  padding: 14px;
+}
+
+.m-label {
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.m-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.m-spacer {
+  flex: 1;
+}
+
+.mono-block {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.tag-m {
+  display: inline-block;
+  padding: 2px 7px;
+  font-size: 11px;
+  line-height: 17px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.action-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  display: flex;
+  gap: 8px;
+  z-index: 40;
+}
+
+.action-bar .van-button {
+  height: 44px;
+  font-size: 15px;
+}
+
+.van-tabbar {
+  border-top: 1px solid var(--line);
+}
+
+.van-tabbar-item {
+  font-size: 11px;
+}
+
+.van-cell {
+  padding: 12px 14px;
+}
+
+.van-field__label {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  padding: 14px 14px 8px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.empty-m {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 13px;
+}
+
+.empty-m::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--line-strong);
+  margin: 0 auto 14px;
+}
+
+/* 状态超大字（业主端） */
+.status-huge {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 38px;
+  letter-spacing: 4px;
+  line-height: 1.2;
+}
+
+.status-huge.normal {
+  color: var(--done);
+}
+
+.status-huge.warn {
+  color: var(--warn);
+}
+
+.status-huge.danger {
+  color: var(--danger);
+}

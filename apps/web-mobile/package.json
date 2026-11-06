@@ -1,0 +1,25 @@
+{
+  "name": "web-mobile",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5174",
+    "build": "vite build",
+    "preview": "vite preview --port 5174"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.0.19",
+    "@fontsource/noto-serif-sc": "^5.0.18",
+    "axios": "^1.7.2",
+    "pinia": "^2.1.7",
+    "vant": "^4.9.4",
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  }
+}

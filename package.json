@@ -1,0 +1,14 @@
+{
+  "name": "property-workorder",
+  "private": true,
+  "version": "1.0.0",
+  "description": "物业公司运维工单管理平台 - 前端工作区",
+  "scripts": {
+    "dev:admin": "pnpm --filter web-admin dev",
+    "dev:mobile": "pnpm --filter web-mobile dev",
+    "build:admin": "pnpm --filter web-admin build",
+    "build:mobile": "pnpm --filter web-mobile build",
+    "build": "pnpm -r build"
+  },
+  "packageManager": "pnpm@9.12.0"
+}

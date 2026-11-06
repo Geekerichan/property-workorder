@@ -1,0 +1,282 @@
+/* ============================================================
+   工程档案 / 工务台账 —— 全局设计 Token
+   实色、近直角、细线分区、等宽数字
+   ============================================================ */
+:root {
+  --paper: #f6f4ef;
+  --card: #ffffff;
+  --ink: #22201b;
+  --ink-2: #6b675e;
+  --ink-3: #8a8578;
+  --line: #e4e0d6;
+  --line-strong: #c9c4b8;
+  --row-hover: #efece4;
+  --brand: #d9480f;
+  --brand-dark: #b53d0a;
+  --state-todo: #8a8578;
+  --state-doing: #3b6ea5;
+  --state-done: #3f7a56;
+  --state-warn: #c98a12;
+  --state-danger: #b23a2f;
+
+  --el-color-primary: #d9480f;
+  --el-color-primary-light-3: #e27a4d;
+  --el-color-primary-light-5: #e99a78;
+  --el-color-primary-light-7: #f0bda5;
+  --el-color-primary-light-8: #f4d0bf;
+  --el-color-primary-light-9: #f9e7dd;
+  --el-color-primary-dark-2: #b53d0a;
+  --el-border-radius-base: 2px;
+  --el-border-radius-small: 2px;
+  --el-border-color: #e4e0d6;
+  --el-border-color-light: #e4e0d6;
+  --el-border-color-lighter: #ece8df;
+  --el-text-color-primary: #22201b;
+  --el-text-color-regular: #3a3630;
+  --el-text-color-secondary: #6b675e;
+  --el-fill-color-light: #f6f4ef;
+  --el-bg-color: #ffffff;
+  --el-font-size-base: 14px;
+  --el-box-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 24px 48px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.panel-body {
+  padding: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* 状态标签：小矩形色块，非胶囊 */
+.tag-box {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* 表格：信息主体 */
+.el-table {
+  --el-table-border-color: var(--line);
+  --el-table-header-bg-color: #f1eee7;
+  --el-table-header-text-color: var(--ink-2);
+  --el-table-row-hover-bg-color: var(--row-hover);
+  font-size: 13px;
+}
+
+.el-table th.el-table__cell {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.el-table .cell {
+  line-height: 20px;
+}
+
+.el-table .el-table__row {
+  height: 44px;
+}
+
+.el-button {
+  font-size: 13px;
+}
+
+.el-button--small {
+  height: 28px;
+}
+
+.el-button--default,
+.el-button--primary {
+  border-radius: 2px;
+}
+
+.el-card,
+.el-dialog,
+.el-drawer {
+  --el-box-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.el-dialog {
+  border-radius: 2px;
+}
+
+.el-input__wrapper,
+.el-select__wrapper,
+.el-textarea__inner {
+  border-radius: 2px;
+}
+
+.el-tabs__item {
+  font-size: 13px;
+}
+
+/* 记录纸式时间轴 */
+.timeline {
+  position: relative;
+  padding-left: 18px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.timeline-node {
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 5px;
+  width: 7px;
+  height: 7px;
+  background: var(--card);
+  border: 1px solid var(--ink-2);
+}
+
+.timeline-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+/* 预警红牌行 */
+.warn-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--state-danger);
+  background: #fbf6f5;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.warn-row.warn {
+  border-left-color: var(--state-warn);
+  background: #fbf8f0;
+}
+
+/* 空状态 */
+.empty-line {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 13px;
+}
+
+.empty-line::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--line-strong);
+  margin: 0 auto 14px;
+}
+
+/* 打印 */
+@media print {
+  .no-print,
+  .el-aside,
+  .admin-header,
+  .el-button {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .page {
+    padding: 0;
+    max-width: none;
+  }
+}

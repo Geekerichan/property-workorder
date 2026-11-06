@@ -1,0 +1,9 @@
+# 构建产物
+backend/target/
+**/node_modules/
+**/dist/
+*.log
+
+# 运行期文件（保留目录，不提交内容）
+data/uploads/*
+!data/uploads/.gitkeep

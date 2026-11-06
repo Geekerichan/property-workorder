@@ -1,0 +1,119 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: property-workorder
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/prop_wo?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 4
+      connection-timeout: 30000
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      database: 0
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 16
+          max-idle: 8
+          min-idle: 2
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 40MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: always
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
+# MyBatis-Plus
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# Sa-Token：PC 与 H5 令牌并存，同端重复登录互踢
+sa-token:
+  token-name: Authorization
+  timeout: 604800
+  active-timeout: -1
+  is-concurrent: false
+  is-share: false
+  token-style: uuid
+  is-log: false
+  is-read-header: true
+  is-read-cookie: false
+  token-prefix: Bearer
+
+# Knife4j
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+  group-configs:
+    - group: 物业端-管理接口
+      paths-to-match: /api/admin/**
+    - group: 作业端-移动接口
+      paths-to-match: /api/app/**
+    - group: 业主端-公开接口
+      paths-to-match: /api/h5/**
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+# 业务参数（扁平键，kebab-case 对应 AppProperties 字段名）
+app:
+  # 运行期文件根目录（照片/合同 PDF/导出文件/二维码），相对于启动工作目录
+  storage-root: ./data/uploads
+  # 二维码内容中的 H5 访问地址
+  qr-base-url: ${QR_BASE_URL:http://localhost:5174/h5/equip}
+  # 二维码 HMAC 签名密钥：生产环境务必通过环境变量 QR_SECRET 覆盖
+  qr-secret: ${QR_SECRET:prop-wo-demo}
+  responsibility-default-days: 45
+  responsibility-min-days: 45
+  responsibility-max-days: 60
+  responsibility-remind-before-days: 7
+  upload-max-size-mb: 5
+  upload-allow-ext: jpg,jpeg,png,webp
+  checkin-radius-meter: 200
+  # 演示模式：true 跳过真实定位距离校验，接受任意位置打卡（生产环境务必置 false）
+  checkin-skip-distance: true
+  # 演示留痕照片初始化：首次启动生成带水印的真实图片
+  demo-init-photos: true
+  # 开发环境固定验证码，接入真实网关时替换 SmsService 实现
+  sms-fixed-code: '123456'
+  annual-remind-days: 30,15,7
+  # 超时催办扫描（分钟）
+  urge-scan-cron: '0 */10 * * * ?'
+
+logging:
+  level:
+    root: info
+    com.prop.wo: info
+    org.springframework.web: warn
