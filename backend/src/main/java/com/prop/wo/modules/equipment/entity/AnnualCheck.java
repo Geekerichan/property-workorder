@@ -9,6 +9,9 @@ import java.time.LocalDate;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 设备年检：annual_check 表，年检记录与有效期。
+ */
 @TableName("annual_check")
 public class AnnualCheck extends BaseEntity {
 

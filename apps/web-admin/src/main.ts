@@ -1,3 +1,4 @@
+// 应用入口：装配 Pinia、路由与 Element Plus，挂载根组件
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import ElementPlus from 'element-plus'

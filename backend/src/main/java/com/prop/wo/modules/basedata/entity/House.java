@@ -9,6 +9,9 @@ import java.math.BigDecimal;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 房屋：house 表，楼盘档案最底层。
+ */
 @TableName("house")
 public class House extends BaseEntity {
 

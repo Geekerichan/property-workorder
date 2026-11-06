@@ -8,6 +8,9 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 巡检记录 Mapper：含巡检统计查询。
+ */
 @Mapper
 public interface InspectionRecordMapper extends BaseMapper<InspectionRecord> {
 

@@ -10,6 +10,9 @@ import java.time.LocalDateTime;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 工单结算：work_order_settlement 表，报酬与结算记录。
+ */
 @TableName("work_order_settlement")
 public class WorkOrderSettlement extends BaseEntity {
 

@@ -1,3 +1,4 @@
+// 认证状态：令牌、用户信息与未读消息，持久化到 localStorage
 import { defineStore } from 'pinia'
 import { authApi } from '@/api'
 

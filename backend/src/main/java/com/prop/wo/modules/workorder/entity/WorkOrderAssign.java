@@ -9,6 +9,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 工单派单记录：work_order_assign 表。
+ */
 @TableName("work_order_assign")
 public class WorkOrderAssign {
 

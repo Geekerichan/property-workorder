@@ -1,3 +1,4 @@
+// Axios 封装：统一鉴权头与错误处理
 import axios from 'axios'
 import { showToast } from 'vant'
 

@@ -11,6 +11,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 工单 Mapper：含状态机条件更新与统计查询。
+ */
 @Mapper
 public interface WorkOrderMapper extends BaseMapper<WorkOrder> {
 

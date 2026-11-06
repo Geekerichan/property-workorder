@@ -1,3 +1,4 @@
+// 应用入口：装配 Pinia、路由与 Vant，挂载根组件
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import Vant from 'vant'

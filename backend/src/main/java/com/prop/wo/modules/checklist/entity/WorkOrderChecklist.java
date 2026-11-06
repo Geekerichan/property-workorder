@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 工单清单实例：work_order_checklist 表，工单执行时的勾选结果。
+ */
 @TableName("work_order_checklist")
 public class WorkOrderChecklist extends BaseEntity {
 

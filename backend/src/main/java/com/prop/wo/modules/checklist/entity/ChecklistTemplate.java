@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 作业清单模板：checklist_template 表，按设施类型定义检查项。
+ */
 @TableName("checklist_template")
 public class ChecklistTemplate extends BaseEntity {
 

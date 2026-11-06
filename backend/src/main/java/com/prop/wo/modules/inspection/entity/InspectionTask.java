@@ -10,6 +10,9 @@ import java.time.LocalDateTime;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 巡检任务：inspection_task 表，按频次生成的执行任务。
+ */
 @TableName("inspection_task")
 public class InspectionTask extends BaseEntity {
 

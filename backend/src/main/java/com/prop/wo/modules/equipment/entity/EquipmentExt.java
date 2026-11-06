@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 设备扩展参数：equipment_ext 表，按设施类型存储差异化 JSON。
+ */
 @TableName("equipment_ext")
 public class EquipmentExt extends BaseEntity {
 

@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 巡检点位：inspection_point 表，路线上绑定的设备检查点。
+ */
 @TableName("inspection_point")
 public class InspectionPoint extends BaseEntity {
 

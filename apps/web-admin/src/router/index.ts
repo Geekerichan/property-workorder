@@ -1,3 +1,4 @@
+// 路由：静态路由表，附登录态校验与角色守卫
 import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 

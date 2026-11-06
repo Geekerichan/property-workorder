@@ -9,6 +9,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 巡检记录：inspection_record 表，检查项的执行结果。
+ */
 @TableName("inspection_record")
 public class InspectionRecord {
 

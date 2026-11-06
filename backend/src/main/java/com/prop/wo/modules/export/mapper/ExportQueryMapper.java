@@ -8,6 +8,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 导出查询 Mapper：跨表聚合查询，不映射单表实体。
+ */
 @Mapper
 public interface ExportQueryMapper {
 

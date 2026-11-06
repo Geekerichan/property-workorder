@@ -9,6 +9,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 现场记录：evidence_record 表，记录作业过程文字留痕。
+ */
 @TableName("evidence_record")
 public class EvidenceRecord {
 

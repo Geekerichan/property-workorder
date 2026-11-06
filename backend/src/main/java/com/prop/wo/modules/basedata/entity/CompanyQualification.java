@@ -9,6 +9,9 @@ import java.time.LocalDate;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 维保公司资质：company_qualification 表，用于资质有效期拦截。
+ */
 @TableName("company_qualification")
 public class CompanyQualification extends BaseEntity {
 

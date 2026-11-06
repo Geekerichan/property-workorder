@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 设备 Mapper：含维保时间统计查询。
+ */
 @Mapper
 public interface EquipmentMapper extends BaseMapper<Equipment> {
 

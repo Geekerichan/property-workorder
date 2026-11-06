@@ -9,6 +9,9 @@ import java.time.LocalDate;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 作业人员：personnel 表，工单主责人与巡检执行主体。
+ */
 @TableName("personnel")
 public class Personnel extends BaseEntity {
 

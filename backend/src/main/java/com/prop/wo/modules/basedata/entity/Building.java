@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 楼栋：building 表，隶属于小区。
+ */
 @TableName("building")
 public class Building extends BaseEntity {
 

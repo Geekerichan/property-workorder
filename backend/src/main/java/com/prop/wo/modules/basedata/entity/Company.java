@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 维保公司：company 表，派单与数据隔离的主体。
+ */
 @TableName("company")
 public class Company extends BaseEntity {
 

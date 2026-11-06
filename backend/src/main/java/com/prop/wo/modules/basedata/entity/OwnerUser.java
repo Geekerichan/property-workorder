@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 业主：owner_user 表，业主端登录主体（手机号 + 验证码）。
+ */
 @TableName("owner_user")
 public class OwnerUser extends BaseEntity {
 

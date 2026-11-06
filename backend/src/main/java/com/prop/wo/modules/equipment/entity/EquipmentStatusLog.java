@@ -9,6 +9,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 设备状态日志：equipment_status_log 表，记录锁停等状态变更。
+ */
 @TableName("equipment_status_log")
 public class EquipmentStatusLog {
 

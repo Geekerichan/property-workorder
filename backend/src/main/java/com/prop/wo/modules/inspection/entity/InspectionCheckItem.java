@@ -7,6 +7,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
+/**
+ * 巡检检查项：inspection_check_item 表，点位下的检查内容。
+ */
 @TableName("inspection_check_item")
 public class InspectionCheckItem {
 

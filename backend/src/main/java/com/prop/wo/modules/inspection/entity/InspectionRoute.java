@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 巡检路线：inspection_route 表，点位序列的集合。
+ */
 @TableName("inspection_route")
 public class InspectionRoute extends BaseEntity {
 

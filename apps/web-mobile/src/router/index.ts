@@ -1,3 +1,4 @@
+// 路由：作业端 / 业主端双端静态路由
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import { getToken } from '@/api/request'
 

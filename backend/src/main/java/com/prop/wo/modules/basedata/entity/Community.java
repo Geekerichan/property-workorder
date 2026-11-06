@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 小区：community 表，楼盘档案顶层。
+ */
 @TableName("community")
 public class Community extends BaseEntity {
 

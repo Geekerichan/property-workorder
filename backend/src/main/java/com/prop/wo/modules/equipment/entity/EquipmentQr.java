@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 设备二维码：equipment_qr 表，存储二维码内容与签名。
+ */
 @TableName("equipment_qr")
 public class EquipmentQr extends BaseEntity {
 

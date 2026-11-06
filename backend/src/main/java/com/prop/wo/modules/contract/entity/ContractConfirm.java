@@ -9,6 +9,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 合同确认记录：contract_confirm 表，记录双方确认时间戳。
+ */
 @TableName("contract_confirm")
 public class ContractConfirm {
 

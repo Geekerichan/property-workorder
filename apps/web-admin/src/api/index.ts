@@ -1,3 +1,4 @@
+// 接口定义：按业务模块分组的 API
 import request, { get, post, del, download } from './request'
 
 /** 认证 */

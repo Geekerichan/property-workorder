@@ -9,6 +9,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 工单抢单记录：work_order_claim 表。
+ */
 @TableName("work_order_claim")
 public class WorkOrderClaim {
 

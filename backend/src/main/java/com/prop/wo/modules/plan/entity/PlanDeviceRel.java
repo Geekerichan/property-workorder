@@ -9,6 +9,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 计划-设备关联：plan_device_rel 表。
+ */
 @TableName("plan_device_rel")
 public class PlanDeviceRel {
 

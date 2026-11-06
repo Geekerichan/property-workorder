@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
+/**
+ * 班组：team 表，按设施类型或区域划分。
+ */
 @TableName("team")
 public class Team extends BaseEntity {
 

@@ -10,6 +10,9 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
+/**
+ * 巡检任务点位：inspection_task_point 表，任务中的点位执行快照。
+ */
 @TableName("inspection_task_point")
 public class InspectionTaskPoint {
 
